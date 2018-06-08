@@ -1,7 +1,6 @@
 #header-box {
     width: 828px;
     height: 200px;
-    background-color: white;
     z-index: 10;
     position: relative;
 }
@@ -9,7 +8,6 @@
 #header-logo {
     width: 318px;
     height: 76px;
-    background: #ffffff;
     z-index: 11;
     position: absolute;
     left: 41px;
@@ -17,9 +15,8 @@
 }
 
 #nav-lines {
-    width: 828px;
+    width: 728px;
     height: 29px;
-    background: #ffffff;
     z-index: 18;
     position: absolute;
     border-top: solid #000000 1px;
@@ -41,7 +38,7 @@ li {
 a {
   color: black;
   font-family: Verdana;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 a:hover {
