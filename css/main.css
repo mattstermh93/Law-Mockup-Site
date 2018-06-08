@@ -1,0 +1,51 @@
+#head-box {
+    width: 828px;
+    height: 200px;
+    background: #ffffff;
+    z-index: 10;
+    position: relative;
+}
+
+#head-logo {
+    width: 318px;
+    height: 76px;
+    background: #ffffff;
+    z-index: 11;
+    position: absolute;
+    left: 41px;
+    top: 47px;
+}
+
+body {
+    background-image: url("http://nzalaw.com/images/nza_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#cont-edges {
+    width: 940px;
+    z-index: 2;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#cont-edges-sides {
+    width: 940px;
+    z-index: 4;
+    background: transparent url(images/cont-edges-sides.png) repeat-y;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#container {
+    width: 828px;
+    z-index: 9;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 56px;
+    padding-right: 56px;
+}
