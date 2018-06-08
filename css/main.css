@@ -1,19 +1,12 @@
-
-
-user agent stylesheet
-html {
-    display: block;
-}
-
-#head-box {
+#header-box {
     width: 828px;
     height: 200px;
-    background: #ffffff;
+    background-color: white;
     z-index: 10;
     position: relative;
 }
 
-#head-logo {
+#header-logo {
     width: 318px;
     height: 76px;
     background: #ffffff;
@@ -23,7 +16,7 @@ html {
     top: 47px;
 }
 
-#head-nav-h {
+#nav-lines {
     width: 828px;
     height: 29px;
     background: #ffffff;
@@ -36,84 +29,35 @@ html {
     left: 0px;
 }
 
-#head-nav-h ul li {
-    float: left;
+.white {
+  background-color: white;
 }
 
-#head-nav-h ul, #head-nav-h ul li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 29px;
+li {
+  display: inline;
+  margin-left: 10px;
 }
 
-#nav-h-who, #nav-h-who a {
-    background: transparent url(images/nav-h-01.jpg) left top no-repeat;
+a {
+  color: black;
+  font-family: Verdana;
+  font-size: 15px;
 }
 
-i {
-    display: list-item;
-    text-align: -webkit-match-parent;
+a:hover {
+  color: red;
 }
 
-#head-nav-h ul, #head-nav-h ul li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 29px;
-}
-
-ul, menu, dir {
-    display: block;
-}
-
-#nav-h-what, #nav-h-what a {
-    background: transparent url(images/nav-h-02.jpg) left top no-repeat;
-}
-
-#nav-h-news, #nav-h-news a {
-    background: transparent url(images/nav-h-03.jpg) left top no-repeat;
-}
-
-#nav-h-where, #nav-h-where a {
-    background: transparent url(images/nav-h-04.jpg) left top no-repeat;
-}
-
-#nav-h-contact, #nav-h-contact a {
-    background: transparent url(images/nav-h-05.jpg) left top no-repeat;
-}
-
-
-
-div {
-  display: block;
-}
-
-.vticker{
-  width: 200px;
-}
-.vticker ul{
-  padding: 0;
-}
-.vticker li{
-  list-style: none;
-  padding: 5px;
-  padding-left:1px;
-  padding-bottom:20px;
-}
-.et-run{
-  background: red;
+.vert-bar {
+  color: lightgrey;
+  line-height: 31px;
 }
 
 body {
     background-image: url("http://nzalaw.com/images/nza_background.jpg");
-    background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 12px;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #00000
-    margin: 0;
-    padding: 0;
 }
 
 #cont-edges {
