@@ -75,7 +75,7 @@ body {
     padding-right: 0px;
 }
 
-#container {
+.container {
     width: 980px;
     z-index: 9;
     text-align: left;
@@ -98,4 +98,12 @@ body {
 .red {
   background-color: #84220B;
   color: white;
+}
+
+span {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
 }
