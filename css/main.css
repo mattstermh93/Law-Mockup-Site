@@ -1,3 +1,10 @@
+
+
+user agent stylesheet
+html {
+    display: block;
+}
+
 #head-box {
     width: 828px;
     height: 200px;
@@ -16,10 +23,97 @@
     top: 47px;
 }
 
+#head-nav-h {
+    width: 828px;
+    height: 29px;
+    background: #ffffff;
+    z-index: 18;
+    position: absolute;
+    border-top: solid #000000 1px;
+    border-bottom: solid #000000 1px;
+    text-align: left;
+    top: 149px;
+    left: 0px;
+}
+
+#head-nav-h ul li {
+    float: left;
+}
+
+#head-nav-h ul, #head-nav-h ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 29px;
+}
+
+#nav-h-who, #nav-h-who a {
+    background: transparent url(images/nav-h-01.jpg) left top no-repeat;
+}
+
+i {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#head-nav-h ul, #head-nav-h ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 29px;
+}
+
+ul, menu, dir {
+    display: block;
+}
+
+#nav-h-what, #nav-h-what a {
+    background: transparent url(images/nav-h-02.jpg) left top no-repeat;
+}
+
+#nav-h-news, #nav-h-news a {
+    background: transparent url(images/nav-h-03.jpg) left top no-repeat;
+}
+
+#nav-h-where, #nav-h-where a {
+    background: transparent url(images/nav-h-04.jpg) left top no-repeat;
+}
+
+#nav-h-contact, #nav-h-contact a {
+    background: transparent url(images/nav-h-05.jpg) left top no-repeat;
+}
+
+
+
+div {
+  display: block;
+}
+
+.vticker{
+  width: 200px;
+}
+.vticker ul{
+  padding: 0;
+}
+.vticker li{
+  list-style: none;
+  padding: 5px;
+  padding-left:1px;
+  padding-bottom:20px;
+}
+.et-run{
+  background: red;
+}
+
 body {
     background-image: url("http://nzalaw.com/images/nza_background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #00000
+    margin: 0;
+    padding: 0;
 }
 
 #cont-edges {
@@ -48,4 +142,15 @@ body {
     margin: 0 auto;
     padding-left: 56px;
     padding-right: 56px;
+}
+
+#cont-edges-bot {
+    width: 940px;
+    z-index: 5;
+    height: 20px;
+    background: transparent
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
 }
