@@ -113,3 +113,12 @@ span {
     height: 360px;
     border: 1px #84220B;
 }
+
+.bottom {
+  width: 900px;
+  background-color: white;
+}
+
+.push-left {
+  margin-left: 20px;
+}
