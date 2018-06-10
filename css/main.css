@@ -107,3 +107,9 @@ span {
 .center {
   text-align: center;
 }
+
+.redbox {
+    width: 300px;
+    height: 360px;
+    border: 1px #84220B;
+}
