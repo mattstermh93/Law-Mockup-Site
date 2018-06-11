@@ -50,6 +50,10 @@ a:hover {
   line-height: 31px;
 }
 
+.thick {
+  font-weight: bold;
+}
+
 body {
     background-image: url("http://nzalaw.com/images/nza_background.jpg");
     background-attachment: fixed;
@@ -124,6 +128,12 @@ span {
     position: absolute;
     font-size: 12px;
     text-align: left;
+}
+
+.bord-img {
+   padding:1px;
+   border:1px solid;
+   position: relative; <!-- changing this makes it overlap the entire page -->
 }
 
 .bottom {
