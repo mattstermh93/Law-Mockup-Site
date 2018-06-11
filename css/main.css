@@ -193,9 +193,13 @@ th {
 }
 
 .pad-left {
-  padding-right: 100px;
+  padding-right: 150px;
 }
 
 .left-text {
   text-align: left;
+}
+
+.small-text {
+  font-size: 8px;
 }
