@@ -112,10 +112,18 @@ span {
     box-shadow:20px 20px 50px grey;
 }
 
-.redbox {
+.redbox1 {
     width: 300px;
     height: 360px;
     border: 1px #84220B;
+}
+
+.redbox2 {
+    width: 160px;
+    height: 330px;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
 }
 
 .bottom {
@@ -124,5 +132,33 @@ span {
 }
 
 .push-left {
-  margin-left: 20px;
+  margin-left: 30px;
+}
+
+.prevent {
+    display: block;
+    position: relative;
+    width: 100px;
+    z-index: 100;
+}
+
+.push-right {
+  margin-right: 20px;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: black;
+  font-weight: bold;
+}
+
+.marg-right {
+  margin-left: 220px;
+  position: relative;
+
 }
