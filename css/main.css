@@ -145,6 +145,13 @@ span {
     font-size: 12px;
     text-align: left;
 }
+.redbox5 {
+    width: 160px;
+    height: 170px;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+}
 
 .bord-img {
    padding:1px;
@@ -202,4 +209,8 @@ th {
 
 .small-text {
   font-size: 8px;
+}
+
+.space {
+  word-spacing: 10em;
 }
