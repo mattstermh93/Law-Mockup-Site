@@ -130,6 +130,22 @@ span {
     text-align: left;
 }
 
+.redbox3 {
+    width: 160px;
+    height: 430px;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+}
+
+.redbox4 {
+    width: 160px;
+    height: 230px;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+}
+
 .bord-img {
    padding:1px;
    border:1px solid;
@@ -178,4 +194,8 @@ th {
 
 .pad-left {
   padding-right: 100px;
+}
+
+.left-text {
+  text-align: left;
 }
