@@ -1,0 +1,56 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+My Project - Lawsite
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="../static/css/main.css">
+{% endblock %}
+
+{% block navbar %}
+<div class="container">
+    <div class="row white">
+      <div id="cont-edges">
+        <div id="cont-edges-sides">
+            <div id="header-box">
+              <div id="header-logo">
+                <div class="col-md-6">
+              <a href="#">
+                <img src="http://placehold.it/318x76">
+                </div>
+              </div> <!--- end head logo -->
+              <div id="nav-lines">
+                <ul>
+                  <li> <a href="/html/who.html">WHO WE ARE</a></li>
+                  <li class="vert-bar">|</li>
+                  <li><a href="/html/what.html">WHAT WE DO</a></li>
+                  <li class="vert-bar">|</li>
+                  <li><a href="/html/news.html">NEWS & EVENTS</a></li>
+                  <li class="vert-bar">|</li>
+                  <li><a href="/html/where.html">WHERE WE WORK</a></li>
+                  <li class="vert-bar">|</li>
+                  <li><a href="/html/contact.html">CONTACT US</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          {% endblock %}
+
+
+          {% block content %}
+            {% block app_content %}{% endblock %}
+          </div>
+
+
+          <link rel="stylesheet" href="../css/main.css">
+          <footer class="center ">
+            <p> ____________________________________________________________________________________ </p>
+            HOME — WHO WE ARE — WHAT WE DO — NEWS & EVENTS — WHERE WE WORK — CONTACT
+            <br></br>
+            <p class=" vert-bar thick small-text"> ©2009 Nielsen, Zehe & Antas, P.C.   //   Website Design by OneTen Creative </p>
+          </footer>
+
+          {% endblock %}
