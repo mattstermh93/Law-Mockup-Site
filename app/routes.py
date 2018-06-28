@@ -73,4 +73,8 @@ def logout():
 
 @app.route('/profile', methods=['GET', 'PUT'])
 def profile():
-    return render_template("profile.html", title='Contact Us')
+    return render_template("profile.html", title='Profile')
+
+@app.route('/edit_profile', methods=['GET', 'PUT'])
+def edit_profile():
+    return render_template("edit_profile.html", title='Edit Profile')
