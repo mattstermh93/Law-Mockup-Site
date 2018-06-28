@@ -13,16 +13,14 @@ My Project - Lawsite
 <div class="container">
   <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
-      {% if current_user.is_anonymous %}
-      <li><a href="{{ url_for('login') }}">Login</a></li>
-      <li><a href="{{ url_for('register') }}">Register</a></li>
-      {% else %}
-        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-        <li><a href="{{ url_for('profile') }}">Profile</a></li>
-      {% endif %}
     </ul>
     {% if current_user.is_authenticated %}
-  <p class="navbar-text pull-right">Hi {{ current_user.username }}!</p>
+  <p class="navbar-text pull-right"><a href="{{ url_for('logout') }}">Logout</a></p>
+  <p class="navbar-text pull-right"><a href="{{ url_for('profile') }}">Profile</a></p>
+
+  {% else %}
+  <p class="navbar-text pull-right"><a href="{{ url_for('login') }}">Login</a></p>
+  <p class="navbar-text pull-right"><a href="{{ url_for('register') }}">Register</a></p>
   {% endif %}
   </nav>
     <div class="row white">
@@ -61,9 +59,7 @@ My Project - Lawsite
         </div>
       </div>
 
-
-          <link rel="stylesheet" href="../css/main.css">
-          <footer class="center ">
+          <footer class="center container ">
             <p> ____________________________________________________________________________________ </p>
             HOME — WHO WE ARE — WHAT WE DO — NEWS & EVENTS — WHERE WE WORK — CONTACT
             <br></br>
