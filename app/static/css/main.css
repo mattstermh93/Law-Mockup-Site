@@ -222,3 +222,7 @@ th {
 .right-bord {
   border-right: 1px solid;
 }
+
+.fixed-pos {
+  position: fixed;
+}
