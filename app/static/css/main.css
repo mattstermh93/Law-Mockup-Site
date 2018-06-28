@@ -80,7 +80,7 @@ body {
 }
 
 .container {
-    width: 1000px;
+    width: 980px;
     z-index: 9;
 }
 
@@ -217,4 +217,8 @@ th {
 
 .bottom-bord {
   border-bottom: 1px solid;
+}
+
+.right-bord {
+  border-right: 1px solid;
 }
