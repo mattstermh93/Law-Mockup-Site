@@ -214,3 +214,7 @@ th {
   line-height: normal;
   font-size: 8px;
 }
+
+.bottom-bord {
+  border-bottom: 1px solid;
+}
