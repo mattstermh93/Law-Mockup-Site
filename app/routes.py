@@ -34,20 +34,6 @@ def where():
 def contact():
     return render_template("contact.html", title='Contact Us')
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if current_user.is_authenticated:
-        return redirect(url_for('index'))
-    register_form = RegistrationForm()
-    if register_form.validate_on_submit():
-        user = User(username=register_form.username.data, email=register_form.email.data)
-        user.set_password(register_form.password.data)
-        db.session.add(user)
-        db.session.commit()
-        flash('Thanks for registering! You can now view your profile.')
-        return redirect(url_for('login'))
-    return render_template('register.html', form=register_form)
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -65,6 +51,20 @@ def login():
         flash('Thanks for logging in {}!'.format(current_user.username))
         return redirect(next_page)
     return render_template('login.html', form=login_form)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    register_form = RegistrationForm()
+    if register_form.validate_on_submit():
+        user = User(username=register_form.username.data, email=register_form.email.data)
+        user.set_password(register_form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Thanks for registering! You can now view your profile.')
+        return redirect(url_for('login'))
+    return render_template('register.html', form=register_form)
 
 @app.route('/logout')
 def logout():
@@ -85,7 +85,4 @@ def edit_profile():
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('edit_profile'))
-    elif request.method == 'GET':
-        form.username.data = current_user.username
-        form.email.data = current_user.email
     return render_template('edit_profile.html', title='Edit Profile', form=form)
