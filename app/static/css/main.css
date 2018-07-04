@@ -184,6 +184,11 @@ table {
   border-collapse: collapse;
 }
 
+table tr th, table tr td {
+  border: 1px;
+  padding: 15px;
+}
+
 th {
   color: black;
   font-weight: bold;
