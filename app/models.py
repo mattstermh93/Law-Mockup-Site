@@ -18,6 +18,11 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return 'Username = {}, Email = {}'.format(self.username, self.email)
 
+class Roles(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    role_name = db.Column(db.String(64), index=True, unique=True)
+    role_desc = db.Column(db.String(120), index=True, unique=True)   
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))

@@ -1,0 +1,25 @@
+-- Table: public.user_roles
+
+DROP TABLE public.user_roles;
+
+CREATE TABLE public.user_roles
+(
+	role_id int,
+	user_id int,
+	CONSTRAINT "fk_role_id" FOREIGN KEY (role_id)
+        REFERENCES public."Roles" (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+	CONSTRAINT "fk_user_id" FOREIGN KEY (user_id)
+        REFERENCES public."Users" (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.user_roles
+    OWNER to postgres;
