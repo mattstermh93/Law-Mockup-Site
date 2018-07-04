@@ -25,6 +25,10 @@ class Roles(UserMixin, db.Model):
     role_name = db.Column(db.String(64), index=True, unique=True)
     role_desc = db.Column(db.String(120), index=True, unique=True)
 
+class user_roles(UserMixin, db.Model): #I realize this is not camelcase, but in postgreSQL is written this way
+    user_id = db.Column(db.Integer)
+    role_id = db.Column(db.Integer)
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
