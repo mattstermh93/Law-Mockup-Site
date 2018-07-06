@@ -24,10 +24,12 @@ class Roles(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     role_name = db.Column(db.String(64), index=True, unique=True)
     role_desc = db.Column(db.String(120), index=True, unique=True)
+    user_role = db.relationship('User_Role',backref='user_Role', lazy='dynamic')
 
-class user_roles(UserMixin, db.Model): #I realize this is not camelcase, but in postgreSQL is written this way
-    user_id = db.Column(db.Integer)
-    role_id = db.Column(db.Integer)
+class user_roles(UserMixin, db.Model): #I realize this is not camelcase, but in postgres is written this way
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
 @login.user_loader
 def load_user(id):
