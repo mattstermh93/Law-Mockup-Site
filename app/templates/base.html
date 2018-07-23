@@ -11,42 +11,55 @@ My Project - Lawsite
 
 {% block navbar %}
 <div class="container">
+  <nav class="navbar navbar-expand-sm pull-right">
+    <ul class="nav navbar-nav">
+    </ul>
+    {% if current_user.is_authenticated %}
+  <p class="navbar-text pull-right"><a href="{{ url_for('logout') }}">Logout</a></p>
+  <p class="navbar-text pull-right"><a href="{{ url_for('profile') }}">Profile</a></p>
+
+  {% else %}
+  <p class="navbar-text pull-right"><a href="{{ url_for('login') }}">Login</a></p>
+  <p class="navbar-text pull-right"><a href="{{ url_for('register') }}">Register</a></p>
+  {% endif %}
+  </nav>
     <div class="row white">
       <div id="cont-edges">
         <div id="cont-edges-sides">
             <div id="header-box">
               <div id="header-logo">
                 <div class="col-md-6">
-              <a href="#">
+              <a href="/index">
                 <img src="http://placehold.it/318x76">
+              </a>
                 </div>
               </div> <!--- end head logo -->
               <div id="nav-lines">
                 <ul>
-                  <li> <a href="/html/who.html">WHO WE ARE</a></li>
+                  <li> <a href="/who">WHO WE ARE</a></li>
                   <li class="vert-bar">|</li>
-                  <li><a href="/html/what.html">WHAT WE DO</a></li>
+                  <li><a href="/what">WHAT WE DO</a></li>
                   <li class="vert-bar">|</li>
-                  <li><a href="/html/news.html">NEWS & EVENTS</a></li>
+                  <li><a href="/news">NEWS & EVENTS</a></li>
                   <li class="vert-bar">|</li>
-                  <li><a href="/html/where.html">WHERE WE WORK</a></li>
+                  <li><a href="/where">WHERE WE WORK</a></li>
                   <li class="vert-bar">|</li>
-                  <li><a href="/html/contact.html">CONTACT US</a></li>
+                  <li><a href="/contact">CONTACT US</a></li>
 
                 </ul>
               </div>
             </div>
           </div>
-          {% endblock %}
 
+          {% endblock %}
 
           {% block content %}
             {% block app_content %}{% endblock %}
           </div>
+        </div>
+      </div>
 
-
-          <link rel="stylesheet" href="../css/main.css">
-          <footer class="center ">
+          <footer class="center container bottom ">
             <p> ____________________________________________________________________________________ </p>
             HOME — WHO WE ARE — WHAT WE DO — NEWS & EVENTS — WHERE WE WORK — CONTACT
             <br></br>
